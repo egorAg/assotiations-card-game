@@ -1,0 +1,603 @@
+{
+  "categories": [
+    { "id": "car-body", "name": "Кузов автомобиля", "associations": ["Седан", "Хетчбек", "Внедорожник", "Лифтбек", "Универсал", "Купе"] },
+    { "id": "fruit", "name": "Фрукты", "associations": ["Яблоко", "Груша", "Банан", "Манго", "Персик", "Слива"] },
+    { "id": "planet", "name": "Планеты", "associations": ["Меркурий", "Венера", "Марс", "Юпитер", "Сатурн", "Уран"] },
+    { "id": "sport", "name": "Виды спорта", "associations": ["Футбол", "Баскетбол", "Теннис", "Плавание", "Лыжи", "Бокс"] },
+    { "id": "tool", "name": "Инструменты", "associations": ["Молоток", "Отвёртка", "Пила", "Дрель", "Рубанок", "Гаечный ключ"] },
+    { "id": "bird", "name": "Птицы", "associations": ["Орёл", "Воробей", "Сова", "Попугай", "Пингвин", "Ласточка"] },
+    { "id": "season", "name": "Времена года", "associations": ["Зима", "Весна", "Лето", "Осень"] },
+    { "id": "ocean", "name": "Океаны", "associations": ["Тихий", "Атлантический", "Индийский", "Северный Ледовитый", "Южный"] },
+
+    { "id": "vegetable", "name": "Овощи", "associations": ["Картофель", "Морковь", "Огурец", "Томат", "Капуста", "Свёкла"] },
+    { "id": "berry", "name": "Ягоды", "associations": ["Клубника", "Малина", "Черника", "Смородина", "Брусника", "Крыжовник"] },
+    { "id": "mushroom", "name": "Грибы", "associations": ["Белый гриб", "Лисичка", "Шампиньон", "Опёнок", "Подберёзовик"] },
+    { "id": "drink", "name": "Напитки", "associations": ["Вода", "Чай", "Кофе", "Сок", "Лимонад", "Какао"] },
+    { "id": "tea-type", "name": "Виды чая", "associations": ["Чёрный", "Зелёный", "Улун", "Пуэр", "Белый"] },
+    { "id": "coffee-type", "name": "Кофейные напитки", "associations": ["Эспрессо", "Американо", "Капучино", "Латте", "Раф"] },
+    { "id": "spice", "name": "Специи", "associations": ["Перец", "Паприка", "Корица", "Куркума", "Тмин", "Мускат"] },
+    { "id": "herb", "name": "Травы", "associations": ["Петрушка", "Укроп", "Базилик", "Кинза", "Мята", "Розмарин"] },
+    { "id": "bread", "name": "Хлеб и выпечка", "associations": ["Батон", "Багет", "Лаваш", "Булочка", "Круассан"] },
+    { "id": "dessert", "name": "Десерты", "associations": ["Торт", "Пирожное", "Печенье", "Мороженое", "Пудинг"] },
+    { "id": "soup", "name": "Супы", "associations": ["Борщ", "Щи", "Солянка", "Рамен", "Крем-суп"] },
+    { "id": "pasta", "name": "Паста", "associations": ["Спагетти", "Пенне", "Фетучини", "Лазанья", "Равиоли"] },
+    { "id": "cereal", "name": "Крупы", "associations": ["Гречка", "Рис", "Овсянка", "Пшено", "Перловка", "Булгур"] },
+    { "id": "meat", "name": "Мясо", "associations": ["Говядина", "Свинина", "Курица", "Индейка", "Баранина"] },
+    { "id": "fish", "name": "Рыба", "associations": ["Лосось", "Треска", "Скумбрия", "Судак", "Тунец"] },
+    { "id": "seafood", "name": "Морепродукты", "associations": ["Креветка", "Кальмар", "Мидии", "Осьминог", "Гребешок"] },
+    { "id": "dairy", "name": "Молочные продукты", "associations": ["Молоко", "Кефир", "Сыр", "Йогурт", "Творог"] },
+    { "id": "cheese-type", "name": "Виды сыра", "associations": ["Чеддер", "Моцарелла", "Пармезан", "Бри", "Фета"] },
+    { "id": "nuts", "name": "Орехи", "associations": ["Миндаль", "Грецкий", "Фундук", "Кешью", "Фисташки"] },
+    { "id": "legume", "name": "Бобовые", "associations": ["Фасоль", "Чечевица", "Горох", "Нут", "Соя"] },
+    { "id": "sweetener", "name": "Подсластители", "associations": ["Сахар", "Мёд", "Стевия", "Сироп", "Патока"] },
+
+    { "id": "animal-mammal", "name": "Млекопитающие", "associations": ["Лев", "Волк", "Слон", "Лошадь", "Кит", "Медведь"] },
+    { "id": "animal-reptile", "name": "Пресмыкающиеся", "associations": ["Змея", "Ящерица", "Крокодил", "Черепаха"] },
+    { "id": "animal-amphibian", "name": "Земноводные", "associations": ["Лягушка", "Жаба", "Тритон", "Саламандра"] },
+    { "id": "animal-insect", "name": "Насекомые", "associations": ["Муравей", "Пчела", "Комар", "Бабочка", "Жук"] },
+    { "id": "animal-fish", "name": "Рыбы", "associations": ["Щука", "Окунь", "Карп", "Сом", "Форель"] },
+    { "id": "animal-pet", "name": "Домашние животные", "associations": ["Кошка", "Собака", "Хомяк", "Попугай", "Кролик"] },
+    { "id": "animal-farm", "name": "Фермерские животные", "associations": ["Корова", "Коза", "Свинья", "Овца", "Курица"] },
+    { "id": "animal-marine", "name": "Морские животные", "associations": ["Дельфин", "Акула", "Морж", "Тюлень", "Скат"] },
+
+    { "id": "tree", "name": "Деревья", "associations": ["Дуб", "Берёза", "Сосна", "Ель", "Клён", "Липа"] },
+    { "id": "flower", "name": "Цветы", "associations": ["Роза", "Тюльпан", "Лилия", "Ромашка", "Пион"] },
+    { "id": "houseplant", "name": "Комнатные растения", "associations": ["Фикус", "Монстера", "Сансевиерия", "Алое", "Орхидея"] },
+    { "id": "garden-work", "name": "Садовые работы", "associations": ["Полив", "Обрезка", "Прополка", "Посев", "Подкормка"] },
+    { "id": "soil", "name": "Почвы", "associations": ["Чернозём", "Суглинок", "Песчаная", "Торфяная"] },
+
+    { "id": "geometry", "name": "Геометрические фигуры", "associations": ["Круг", "Квадрат", "Треугольник", "Прямоугольник", "Ромб"] },
+    { "id": "color", "name": "Цвета", "associations": ["Красный", "Синий", "Зелёный", "Жёлтый", "Чёрный", "Белый"] },
+    { "id": "material", "name": "Материалы", "associations": ["Сталь", "Дерево", "Пластик", "Стекло", "Алюминий", "Керамика"] },
+    { "id": "texture", "name": "Фактуры", "associations": ["Гладкий", "Шероховатый", "Матовый", "Глянцевый", "Рифлёный"] },
+
+    { "id": "music-genre", "name": "Жанры музыки", "associations": ["Рок", "Поп", "Джаз", "Хип-хоп", "Классика", "Электроника"] },
+    { "id": "instrument-music", "name": "Музыкальные инструменты", "associations": ["Гитара", "Пианино", "Скрипка", "Барабаны", "Саксофон"] },
+    { "id": "movie-genre", "name": "Жанры кино", "associations": ["Комедия", "Драма", "Боевик", "Ужасы", "Фантастика", "Триллер"] },
+    { "id": "book-genre", "name": "Жанры книг", "associations": ["Фэнтези", "Детектив", "Роман", "Нон-фикшн", "Поэзия"] },
+    { "id": "theater", "name": "Театр", "associations": ["Сцена", "Актёр", "Режиссёр", "Премьера", "Антракт"] },
+    { "id": "painting", "name": "Живопись", "associations": ["Портрет", "Пейзаж", "Натюрморт", "Акварель", "Масло"] },
+
+    { "id": "device", "name": "Устройства", "associations": ["Смартфон", "Ноутбук", "Планшет", "Монитор", "Маршрутизатор"] },
+    { "id": "computer-part", "name": "Комплектующие ПК", "associations": ["Процессор", "Видеокарта", "ОЗУ", "SSD", "Материнская плата"] },
+    { "id": "network", "name": "Сети", "associations": ["Ethernet", "Wi-Fi", "VPN", "DNS", "Firewall"] },
+    { "id": "database", "name": "Базы данных", "associations": ["PostgreSQL", "MySQL", "MongoDB", "Redis", "SQLite"] },
+    { "id": "backend-arch", "name": "Архитектура бэкенда", "associations": ["Монолит", "Микросервисы", "CQRS", "Event Sourcing", "Hexagonal"] },
+    { "id": "api-style", "name": "Стиль API", "associations": ["REST", "GraphQL", "gRPC", "WebSocket"] },
+    { "id": "auth", "name": "Аутентификация", "associations": ["JWT", "OAuth", "Session", "SSO", "2FA"] },
+    { "id": "testing", "name": "Тестирование", "associations": ["Unit", "Integration", "E2E", "Mock", "Coverage"] },
+    { "id": "devops", "name": "DevOps", "associations": ["CI/CD", "Docker", "Kubernetes", "Terraform", "Monitoring"] },
+    { "id": "observability", "name": "Наблюдаемость", "associations": ["Логи", "Метрики", "Трейсы", "Алерты"] },
+    { "id": "security", "name": "Безопасность", "associations": ["Шифрование", "XSS", "CSRF", "SQL-инъекция", "RBAC"] },
+
+    { "id": "transport", "name": "Транспорт", "associations": ["Автобус", "Поезд", "Самолёт", "Трамвай", "Метро"] },
+    { "id": "car-part", "name": "Детали автомобиля", "associations": ["Двигатель", "Коробка", "Тормоза", "Подвеска", "Радиатор"] },
+    { "id": "fuel", "name": "Топливо", "associations": ["Бензин", "Дизель", "Газ", "Электричество"] },
+    { "id": "road-sign", "name": "Дорожные знаки", "associations": ["Уступи дорогу", "Стоп", "Главная дорога", "Пешеходный переход"] },
+
+    { "id": "city-places", "name": "Места в городе", "associations": ["Парк", "Кафе", "Музей", "Стадион", "Библиотека"] },
+    { "id": "home-rooms", "name": "Комнаты дома", "associations": ["Кухня", "Спальня", "Ванная", "Гостиная", "Кабинет"] },
+    { "id": "furniture", "name": "Мебель", "associations": ["Стол", "Стул", "Диван", "Шкаф", "Кровать"] },
+    { "id": "appliance", "name": "Бытовая техника", "associations": ["Холодильник", "Плита", "Стиралка", "Пылесос", "Микроволновка"] },
+    { "id": "kitchenware", "name": "Кухонная утварь", "associations": ["Сковорода", "Кастрюля", "Нож", "Тёрка", "Лопатка"] },
+    { "id": "cleaning", "name": "Уборка", "associations": ["Швабра", "Тряпка", "Средство", "Губка", "Порошок"] },
+
+    { "id": "clothing", "name": "Одежда", "associations": ["Футболка", "Джинсы", "Куртка", "Пальто", "Платье"] },
+    { "id": "shoes", "name": "Обувь", "associations": ["Кроссовки", "Ботинки", "Туфли", "Сандалии", "Сапоги"] },
+    { "id": "accessory", "name": "Аксессуары", "associations": ["Ремень", "Шапка", "Шарф", "Очки", "Перчатки"] },
+
+    { "id": "weather", "name": "Погода", "associations": ["Солнце", "Дождь", "Снег", "Ветер", "Туман"] },
+    { "id": "natural-disaster", "name": "Стихийные бедствия", "associations": ["Землетрясение", "Ураган", "Наводнение", "Пожар", "Извержение"] },
+    { "id": "landform", "name": "Рельеф", "associations": ["Гора", "Равнина", "Долина", "Плато", "Ущелье"] },
+
+    { "id": "space-objects", "name": "Космические объекты", "associations": ["Звезда", "Комета", "Астероид", "Галактика", "Туманность"] },
+    { "id": "constellation", "name": "Созвездия", "associations": ["Орион", "Большая Медведица", "Кассиопея", "Лебедь"] },
+    { "id": "astronomy-tools", "name": "Астрономические приборы", "associations": ["Телескоп", "Окуляр", "Монтировка", "Фильтр"] },
+
+    { "id": "math", "name": "Математика", "associations": ["Алгебра", "Анализ", "Вероятность", "Матрица", "Интеграл"] },
+    { "id": "physics", "name": "Физика", "associations": ["Механика", "Оптика", "Термодинамика", "Квант", "Электричество"] },
+    { "id": "chemistry", "name": "Химия", "associations": ["Кислота", "Щёлочь", "Реакция", "Катализ", "Раствор"] },
+    { "id": "biology", "name": "Биология", "associations": ["Клетка", "Ген", "Эволюция", "Организм", "Фотосинтез"] },
+    { "id": "medicine", "name": "Медицина", "associations": ["Диагноз", "Терапия", "Вакцина", "Симптом", "Анализ"] },
+    { "id": "economics", "name": "Экономика", "associations": ["Рынок", "Инфляция", "Спрос", "Предложение", "Бюджет"] },
+    { "id": "law", "name": "Право", "associations": ["Договор", "Иск", "Суд", "Норма", "Ответственность"] },
+
+    { "id": "emotions", "name": "Эмоции", "associations": ["Радость", "Грусть", "Гнев", "Страх", "Удивление"] },
+    { "id": "character", "name": "Черты характера", "associations": ["Смелость", "Лень", "Упрямство", "Щедрость", "Честность"] },
+    { "id": "hobby", "name": "Хобби", "associations": ["Рисование", "Рыбалка", "Готовка", "Фотография", "Садоводство"] },
+
+    { "id": "office", "name": "Офис", "associations": ["Переговорка", "Дедлайн", "Отчёт", "Планёрка", "Кофемашина"] },
+    { "id": "stationery", "name": "Канцелярия", "associations": ["Ручка", "Карандаш", "Ластик", "Скрепка", "Маркер"] },
+    { "id": "education", "name": "Обучение", "associations": ["Лекция", "Семинар", "Экзамен", "Зачёт", "Практика"] },
+
+    { "id": "time", "name": "Время", "associations": ["Секунда", "Минута", "Час", "День", "Неделя"] },
+    { "id": "calendar", "name": "Календарь", "associations": ["Январь", "Март", "Июнь", "Сентябрь", "Декабрь"] },
+
+    { "id": "languages", "name": "Языки", "associations": ["Русский", "Английский", "Немецкий", "Французский", "Испанский"] },
+    { "id": "programming-languages", "name": "Языки программирования", "associations": ["TypeScript", "JavaScript", "Python", "Go", "Java", "C#"] },
+    { "id": "frameworks", "name": "Фреймворки", "associations": ["NestJS", "Express", "FastAPI", "Spring", "Django"] },
+    { "id": "patterns", "name": "Паттерны", "associations": ["Singleton", "Factory", "Adapter", "Observer", "Strategy"] },
+
+    { "id": "payments", "name": "Платежи", "associations": ["Карта", "Перевод", "Касса", "Счёт", "Комиссия"] },
+    { "id": "banking", "name": "Банкинг", "associations": ["Кредит", "Депозит", "Процент", "Ипотека", "Лимит"] },
+
+    { "id": "games", "name": "Игры", "associations": ["Шахматы", "Покер", "Пазл", "Шутер", "Стратегия"] },
+    { "id": "boardgames", "name": "Настолки", "associations": ["Монополия", "Каркассон", "Уно", "Диксит", "Колонизаторы"] },
+
+    { "id": "travel", "name": "Путешествия", "associations": ["Билет", "Отель", "Маршрут", "Чемодан", "Паспорт"] },
+    { "id": "countries-europe", "name": "Страны Европы", "associations": ["Нидерланды", "Германия", "Франция", "Италия", "Испания"] },
+    { "id": "countries-asia", "name": "Страны Азии", "associations": ["Япония", "Китай", "Корея", "Таиланд", "Индия"] },
+
+    { "id": "religion", "name": "Религии", "associations": ["Христианство", "Ислам", "Буддизм", "Иудаизм", "Индуизм"] },
+    { "id": "myth-creatures", "name": "Мифические существа", "associations": ["Дракон", "Феникс", "Единорог", "Кракен", "Грифон"] },
+
+    { "id": "construction", "name": "Строительство", "associations": ["Фундамент", "Кирпич", "Бетон", "Арматура", "Уровень"] },
+    { "id": "fasteners", "name": "Крепёж", "associations": ["Гвоздь", "Саморез", "Болт", "Гайка", "Дюбель"] },
+    { "id": "electric", "name": "Электрика", "associations": ["Провод", "Розетка", "Выключатель", "Автомат", "Заземление"] },
+    { "id": "plumbing", "name": "Сантехника", "associations": ["Труба", "Сифон", "Смеситель", "Кран", "Фитинг"] },
+
+    { "id": "internet-culture", "name": "Интернет-культура", "associations": ["Мем", "Тренд", "Тред", "Хайп", "Шитпост"] },
+    { "id": "social-network", "name": "Соцсети", "associations": ["Пост", "Сторис", "Лайк", "Репост", "Подписка"] },
+
+    { "id": "mountains", "name": "Горы", "associations": ["Эверест", "Эльбрус", "Монблан", "Альпы", "Кавказ"] },
+    { "id": "rivers", "name": "Реки", "associations": ["Волга", "Дунай", "Нил", "Амазонка", "Янцзы"] },
+    { "id": "lakes", "name": "Озёра", "associations": ["Байкал", "Ладога", "Онега", "Виктория", "Титикака"] },
+
+    { "id": "browsers", "name": "Браузеры", "associations": ["Chrome", "Firefox", "Safari", "Edge", "Opera"] },
+    { "id": "os", "name": "Операционные системы", "associations": ["Linux", "Windows", "macOS", "Android", "iOS"] },
+    { "id": "linux-distros", "name": "Дистрибутивы Linux", "associations": ["Ubuntu", "Debian", "Arch", "Fedora", "Alpine"] },
+    { "id": "containers", "name": "Контейнеризация", "associations": ["Docker", "Image", "Container", "Registry", "Compose"] },
+
+    { "id": "marketing", "name": "Маркетинг", "associations": ["Бренд", "Реклама", "Сегмент", "Воронка", "Лид"] },
+    { "id": "sales", "name": "Продажи", "associations": ["Сделка", "Скрипт", "Клиент", "Апсейл", "Конверсия"] },
+
+    { "id": "transport-air", "name": "Авиация", "associations": ["Самолёт", "Аэропорт", "Пилот", "Рейс", "Шасси"] },
+    { "id": "transport-sea", "name": "Морской транспорт", "associations": ["Корабль", "Порт", "Капитан", "Парус", "Контейнер"] },
+
+    { "id": "photography", "name": "Фотография", "associations": ["Объектив", "Диафрагма", "Экспозиция", "Фокус", "Штатив"] },
+    { "id": "video", "name": "Видео", "associations": ["Монтаж", "Кадр", "Свет", "Звук", "Сценарий"] },
+    { "id": "design", "name": "Дизайн", "associations": ["Макет", "Сетка", "Типографика", "Контраст", "Палитра"] },
+
+    { "id": "finance-personal", "name": "Личные финансы", "associations": ["Доход", "Расход", "Накопления", "Инвестиции", "Подушка"] },
+    { "id": "investment", "name": "Инвестиции", "associations": ["Акции", "Облигации", "ETF", "Риск", "Дивиденды"] },
+
+    { "id": "psychology", "name": "Психология", "associations": ["Мотивация", "Стресс", "Память", "Внимание", "Привычка"] },
+    { "id": "relationships", "name": "Отношения", "associations": ["Доверие", "Поддержка", "Конфликт", "Диалог", "Границы"] },
+
+    { "id": "festival", "name": "Праздники", "associations": ["Новый год", "Рождество", "Пасха", "Хэллоуин", "День рождения"] },
+    { "id": "gifts", "name": "Подарки", "associations": ["Открытка", "Букет", "Сертификат", "Сюрприз", "Упаковка"] },
+
+    { "id": "sports-winter", "name": "Зимние виды спорта", "associations": ["Биатлон", "Сноуборд", "Хоккей", "Фигурное катание", "Лыжи"] },
+    { "id": "sports-water", "name": "Водные виды спорта", "associations": ["Плавание", "Сёрфинг", "Дайвинг", "Гребля", "Виндсёрфинг"] },
+
+    { "id": "space-missions", "name": "Космические миссии", "associations": ["Запуск", "Орбита", "Посадка", "Стыковка", "Экипаж"] },
+    { "id": "rockets", "name": "Ракеты", "associations": ["Ступень", "Двигатель", "Тяга", "Топливо", "Обтекатель"] },
+
+    { "id": "transport-bicycle", "name": "Велосипеды", "associations": ["Рама", "Цепь", "Переключатель", "Тормоз", "Покрышка"] },
+    { "id": "transport-motorcycle", "name": "Мотоциклы", "associations": ["Шлем", "Бак", "Картер", "Клипоны", "Глушитель"] },
+
+    { "id": "health", "name": "Здоровье", "associations": ["Сон", "Питание", "Тренировка", "Вода", "Режим"] },
+    { "id": "fitness", "name": "Фитнес", "associations": ["Кардио", "Силовые", "Растяжка", "Пресс", "Пульс"] },
+
+    { "id": "artificial-intelligence", "name": "Искусственный интеллект", "associations": ["Модель", "Данные", "Инференс", "Обучение", "Токены"] },
+    { "id": "ml-metrics", "name": "Метрики ML", "associations": ["Accuracy", "Precision", "Recall", "F1", "ROC-AUC"] },
+
+    { "id": "cryptography", "name": "Криптография", "associations": ["AES", "RSA", "Хэш", "Соль", "Подпись"] },
+    { "id": "data-formats", "name": "Форматы данных", "associations": ["JSON", "XML", "CSV", "YAML", "Parquet"] },
+
+    { "id": "workout-equipment", "name": "Спортинвентарь", "associations": ["Гантели", "Штанга", "Коврик", "Скакалка", "Эспандер"] },
+    { "id": "first-aid", "name": "Первая помощь", "associations": ["Бинт", "Пластырь", "Антисептик", "Жгут", "Термометр"] },
+
+    { "id": "police", "name": "Правоохранение", "associations": ["Патруль", "Протокол", "Участковый", "Допрос", "Розыск"] },
+    { "id": "fire-safety", "name": "Пожарная безопасность", "associations": ["Огнетушитель", "Сигнализация", "Эвакуация", "Дым", "Пожарный"] },
+
+    { "id": "navigation", "name": "Навигация", "associations": ["Карта", "Компас", "Маршрут", "Координаты", "Навигатор"] },
+    { "id": "maps", "name": "Карты", "associations": ["Топография", "Атлас", "Легенда", "Масштаб", "Сетка"] },
+
+    { "id": "space-station", "name": "Космические станции", "associations": ["МКС", "Модуль", "Шлюз", "Орбита", "Солнечные панели"] },
+    { "id": "robots", "name": "Роботы", "associations": ["Манипулятор", "Датчик", "Привод", "Алгоритм", "Навигация"] },
+
+    { "id": "typography", "name": "Типографика", "associations": ["Кегль", "Гарнитура", "Интерлиньяж", "Кернинг", "Глиф"] },
+    { "id": "ui-components", "name": "UI-компоненты", "associations": ["Кнопка", "Форма", "Список", "Таб", "Модалка"] },
+
+    { "id": "logistics", "name": "Логистика", "associations": ["Склад", "Доставка", "Маршрут", "Паллет", "Трек-номер"] },
+    { "id": "warehouse", "name": "Склад", "associations": ["Стеллаж", "Ячейка", "Инвентаризация", "Отгрузка", "Приёмка"] },
+
+    { "id": "metals", "name": "Металлы", "associations": ["Железо", "Медь", "Алюминий", "Никель", "Титан"] },
+    { "id": "alloys", "name": "Сплавы", "associations": ["Сталь", "Латунь", "Бронза", "Дюраль", "Нихром"] },
+
+    { "id": "railway", "name": "Железная дорога", "associations": ["Вокзал", "Перрон", "Рельсы", "Локомотив", "Вагон"] },
+    { "id": "shipping", "name": "Грузоперевозки", "associations": ["Фура", "Контейнер", "Накладная", "Таможня", "Тариф"] },
+
+    { "id": "geopolitics", "name": "Геополитика", "associations": ["Граница", "Союз", "Санкции", "Договор", "Переговоры"] },
+    { "id": "history-epochs", "name": "Исторические эпохи", "associations": ["Античность", "Средневековье", "Ренессанс", "Просвещение", "Новейшее время"] },
+
+    { "id": "philosophy", "name": "Философия", "associations": ["Этика", "Логика", "Смысл", "Познание", "Свобода"] },
+    { "id": "literature", "name": "Литература", "associations": ["Сюжет", "Герой", "Метафора", "Роман", "Рассказ"] },
+
+    { "id": "cinema-tools", "name": "Кинооборудование", "associations": ["Камера", "Штатив", "Свет", "Петличка", "Стабилизатор"] },
+    { "id": "sound", "name": "Звук", "associations": ["Микрофон", "Эквалайзер", "Шумоподавление", "Динамик", "Акустика"] },
+
+    { "id": "kinds-of-houses", "name": "Типы жилья", "associations": ["Квартира", "Дом", "Таунхаус", "Студия", "Дача"] },
+    { "id": "real-estate", "name": "Недвижимость", "associations": ["Ипотека", "Аренда", "Кадастр", "Сделка", "Риэлтор"] },
+
+    { "id": "office-roles", "name": "Роли в команде", "associations": ["Разработчик", "Тестировщик", "Аналитик", "Дизайнер", "Продакт"] },
+    { "id": "project-management", "name": "Управление проектами", "associations": ["Спринт", "Бэклог", "Ретро", "Планирование", "Риски"] },
+
+    { "id": "cloud", "name": "Облака", "associations": ["AWS", "GCP", "Azure", "S3", "IAM"] },
+    { "id": "message-brokers", "name": "Брокеры сообщений", "associations": ["Kafka", "RabbitMQ", "NATS", "SQS", "Redis Streams"] },
+
+    { "id": "error-types", "name": "Типы ошибок", "associations": ["Timeout", "Deadlock", "Race condition", "Null pointer", "Overflow"] },
+    { "id": "http-status", "name": "HTTP статусы", "associations": ["200", "201", "400", "401", "404", "500"] },
+
+    { "id": "build-tools", "name": "Сборка", "associations": ["Webpack", "Vite", "Babel", "tsc", "ESLint"] },
+    { "id": "version-control", "name": "Контроль версий", "associations": ["Git", "Commit", "Branch", "Merge", "Rebase"] },
+
+    { "id": "space-time", "name": "Космология", "associations": ["Большой взрыв", "Расширение", "Тёмная материя", "Космологическая постоянная"] },
+    { "id": "quantum", "name": "Квантовая физика", "associations": ["Суперпозиция", "Квант", "Спин", "Когерентность", "Запутанность"] },
+
+    { "id": "music-theory", "name": "Теория музыки", "associations": ["Нота", "Аккорд", "Лад", "Ритм", "Тональность"] },
+    { "id": "sports-gear", "name": "Экипировка спорта", "associations": ["Форма", "Бутсы", "Шлем", "Защита", "Перчатки"] },
+
+    { "id": "hygiene", "name": "Гигиена", "associations": ["Мыло", "Шампунь", "Зубная паста", "Дезодорант", "Полотенце"] },
+    { "id": "cosmetics", "name": "Косметика", "associations": ["Крем", "Тон", "Тушь", "Помада", "Сыворотка"] },
+
+    { "id": "currency", "name": "Валюты", "associations": ["Евро", "Доллар", "Рубль", "Фунт", "Йена"] },
+    { "id": "measurement", "name": "Единицы измерения", "associations": ["Метр", "Килограмм", "Литр", "Ватт", "Паскаль"] },
+
+    { "id": "signals", "name": "Сигналы", "associations": ["Импульс", "Шум", "Фильтр", "Частота", "Амплитуда"] },
+    { "id": "electronics", "name": "Электроника", "associations": ["Резистор", "Конденсатор", "Диод", "Транзистор", "Микросхема"] },
+
+    { "id": "architecture", "name": "Архитектура зданий", "associations": ["Фасад", "Колонна", "Арка", "Купол", "Планировка"] },
+    { "id": "interior", "name": "Интерьер", "associations": ["Свет", "Текстиль", "Декор", "Зонирование", "Покрытие"] },
+
+    { "id": "jobs", "name": "Профессии", "associations": ["Врач", "Учитель", "Инженер", "Повар", "Юрист"] },
+    { "id": "industries", "name": "Отрасли", "associations": ["IT", "Строительство", "Медицина", "Транспорт", "Образование"] },
+
+    { "id": "languages-ru-styles", "name": "Стили речи", "associations": ["Разговорный", "Официальный", "Научный", "Публицистический", "Художественный"] },
+    { "id": "writing", "name": "Письмо", "associations": ["Абзац", "Тезис", "Аргумент", "Вывод", "Черновик"] },
+
+    { "id": "weather-phenomena", "name": "Явления погоды", "associations": ["Гроза", "Град", "Радуга", "Иней", "Метель"] },
+    { "id": "climate-zones", "name": "Климатические пояса", "associations": ["Арктический", "Умеренный", "Субтропический", "Тропический"] },
+
+    { "id": "ocean-life", "name": "Жизнь океана", "associations": ["Планктон", "Коралл", "Медуза", "Краб", "Морская звезда"] },
+
+    { "id": "kitchen-techniques", "name": "Кулинарные техники", "associations": ["Жарка", "Варка", "Тушение", "Запекание", "Гриль"] },
+    { "id": "taste", "name": "Вкусы", "associations": ["Сладкий", "Солёный", "Кислый", "Горький", "Умами"] },
+
+    { "id": "computer-security", "name": "Инфобез", "associations": ["Фишинг", "Взлом", "Политика", "Аудит", "Пентест"] },
+    { "id": "backup", "name": "Резервное копирование", "associations": ["Бэкап", "Снимок", "Архив", "Репликация", "Восстановление"] },
+
+    { "id": "contracts", "name": "Контракты", "associations": ["Срок", "Штраф", "Обязательства", "Поставка", "Подпись"] },
+    { "id": "documents", "name": "Документы", "associations": ["Паспорт", "Справка", "Заявление", "Доверенность", "Квитанция"] },
+
+    { "id": "home-repair", "name": "Домашний ремонт", "associations": ["Шпаклёвка", "Краска", "Дрель", "Плитка", "Уровень"] },
+    { "id": "painting-walls", "name": "Покраска", "associations": ["Валик", "Кисть", "Грунтовка", "Эмаль", "Скотч"] },
+
+    { "id": "transport-signals", "name": "Сигналы на дороге", "associations": ["Поворотник", "Фары", "Клаксон", "Стоп-сигнал", "Аварийка"] },
+
+    { "id": "literary-forms", "name": "Литературные формы", "associations": ["Роман", "Повесть", "Рассказ", "Эссе", "Поэма"] },
+    { "id": "poetry", "name": "Поэзия", "associations": ["Рифма", "Строфа", "Размер", "Метафора", "Лирика"] },
+
+    { "id": "mountain-sports", "name": "Горные активности", "associations": ["Треккинг", "Альпинизм", "Скалолазание", "Фрирайд", "Ски-тур"] },
+
+    { "id": "kitchen-appliances", "name": "Кухонные приборы", "associations": ["Блендер", "Миксер", "Тостер", "Мультиварка", "Чайник"] },
+    { "id": "food-storage", "name": "Хранение еды", "associations": ["Контейнер", "Пакет", "Заморозка", "Вакуум", "Банка"] },
+
+    { "id": "communication", "name": "Коммуникация", "associations": ["Сообщение", "Звонок", "Письмо", "Встреча", "Чат"] },
+
+    { "id": "metrology", "name": "Метрология", "associations": ["Погрешность", "Калибровка", "Эталон", "Измерение", "Допуск"] },
+
+    { "id": "calculus", "name": "Матанализ", "associations": ["Предел", "Производная", "Интеграл", "Ряд", "Сходимость"] },
+    { "id": "linear-algebra", "name": "Линейная алгебра", "associations": ["Вектор", "Матрица", "Определитель", "Базис", "Ранг"] },
+
+    { "id": "probability", "name": "Теория вероятностей", "associations": ["Событие", "Вероятность", "Дисперсия", "Случайная величина"] },
+    { "id": "statistics", "name": "Статистика", "associations": ["Выборка", "Среднее", "Медиана", "Доверительный интервал", "Гипотеза"] },
+
+    { "id": "ui-ux", "name": "UX", "associations": ["Юзабилити", "Прототип", "Сценарий", "Фидбек", "Онбординг"] },
+
+    { "id": "dataviz", "name": "Визуализация данных", "associations": ["График", "Диаграмма", "Дашборд", "Срез", "Фильтр"] },
+
+    { "id": "etl", "name": "ETL", "associations": ["Extract", "Transform", "Load", "Pipeline", "Job"] },
+
+    { "id": "streaming", "name": "Стриминг", "associations": ["Трансляция", "Чат", "Донат", "Подписка", "Клип"] },
+
+    { "id": "hardware-tools", "name": "Инструменты электроники", "associations": ["Паяльник", "Флюс", "Мультиметр", "Осциллограф", "Пинцет"] },
+
+    { "id": "gardening-tools", "name": "Садовый инструмент", "associations": ["Лопата", "Грабли", "Секатор", "Тяпка", "Лейка"] },
+
+    { "id": "kinds-of-doors", "name": "Двери", "associations": ["Межкомнатная", "Входная", "Раздвижная", "Металлическая", "Деревянная"] },
+
+    { "id": "windows", "name": "Окна", "associations": ["Стеклопакет", "Рама", "Фурнитура", "Подоконник", "Откос"] },
+
+    { "id": "flooring", "name": "Напольные покрытия", "associations": ["Ламинат", "Паркет", "Плитка", "Линолеум", "Ковролин"] },
+
+    { "id": "wall-finishing", "name": "Отделка стен", "associations": ["Обои", "Краска", "Штукатурка", "Панели", "Декоративный камень"] },
+
+    { "id": "ceilings", "name": "Потолки", "associations": ["Натяжной", "Гипсокартон", "Побелка", "Реечный"] },
+
+    { "id": "lighting", "name": "Освещение", "associations": ["Люстра", "Бра", "Спот", "Лента", "Светильник"] },
+
+    { "id": "smart-home", "name": "Умный дом", "associations": ["Датчик", "Хаб", "Сценарий", "Автоматизация", "Голосовой ассистент"] },
+
+    { "id": "mobile-apps", "name": "Мобильные приложения", "associations": ["Интерфейс", "Пуши", "Онбординг", "Аналитика", "Обновление"] },
+
+    { "id": "web", "name": "Веб", "associations": ["HTML", "CSS", "JavaScript", "SSR", "SPA"] },
+
+    { "id": "search", "name": "Поиск", "associations": ["Индекс", "Ранжирование", "Запрос", "Релевантность", "Сниппет"] },
+
+    { "id": "business-models", "name": "Бизнес-модели", "associations": ["Подписка", "Freemium", "Маркетплейс", "Комиссия", "Лицензия"] },
+
+    { "id": "startup", "name": "Стартап", "associations": ["Питч", "Инвестор", "MVP", "Гипотеза", "Трекшн"] },
+
+    { "id": "management", "name": "Менеджмент", "associations": ["Стратегия", "Команда", "Процессы", "Показатели", "Ресурсы"] },
+
+    { "id": "leadership", "name": "Лидерство", "associations": ["Ответственность", "Влияние", "Видение", "Доверие", "Пример"] },
+
+    { "id": "conflict", "name": "Конфликты", "associations": ["Спор", "Компромисс", "Эскалация", "Медиация", "Примирение"] },
+
+    { "id": "negotiation", "name": "Переговоры", "associations": ["Позиция", "Интерес", "Аргумент", "Уступка", "Соглашение"] },
+
+    { "id": "customer-support", "name": "Поддержка", "associations": ["Тикет", "SLA", "Ответ", "Эскалация", "База знаний"] },
+
+    { "id": "quality", "name": "Качество", "associations": ["Дефект", "Проверка", "Стандарт", "Регламент", "Контроль"] },
+
+    { "id": "pharma", "name": "Фарма", "associations": ["Таблетка", "Дозировка", "Рецепт", "Побочка", "Действующее вещество"] },
+
+    { "id": "hospital", "name": "Больница", "associations": ["Палата", "Врач", "Процедура", "Диагностика", "Приём"] },
+
+    { "id": "kinds-of-transport-tickets", "name": "Билеты", "associations": ["Посадочный", "Купон", "Тариф", "Бронь", "Возврат"] },
+
+    { "id": "airport", "name": "Аэропорт", "associations": ["Терминал", "Регистрация", "Досмотр", "Гейт", "Багаж"] },
+
+    { "id": "hotel", "name": "Отель", "associations": ["Ресепшен", "Номер", "Завтрак", "Бронь", "Чекаут"] },
+
+    { "id": "tourism", "name": "Туризм", "associations": ["Экскурсия", "Гид", "Достопримечательность", "Маршрут", "Сувенир"] },
+
+    { "id": "electronics-repair", "name": "Ремонт электроники", "associations": ["Диагностика", "Пайка", "Шлейф", "Разъём", "Прошивка"] },
+
+    { "id": "car-service", "name": "Автосервис", "associations": ["Подъёмник", "Диагностика", "ТО", "Запчасти", "Сход-развал"] },
+
+    { "id": "tires", "name": "Шины", "associations": ["Летние", "Зимние", "Шипы", "Протектор", "Давление"] },
+
+    { "id": "wheels", "name": "Диски", "associations": ["Литые", "Штамп", "R16", "Вылет", "Разболтовка"] },
+
+    { "id": "car-audio", "name": "Автозвук", "associations": ["Сабвуфер", "Усилитель", "Динамики", "Шумоизоляция", "Процессор"] },
+
+    { "id": "car-electronics", "name": "Автоэлектроника", "associations": ["CAN-шина", "Датчик", "ЭБУ", "Иммобилайзер", "Сигнализация"] },
+
+    { "id": "programming-concepts", "name": "Концепции программирования", "associations": ["Абстракция", "Инкапсуляция", "Полиморфизм", "Рекурсия", "Итерация"] },
+
+    { "id": "software-quality", "name": "Надёжность ПО", "associations": ["Отказоустойчивость", "Идемпотентность", "Ретрай", "Дедупликация", "Таймаут"] },
+
+    { "id": "distributed-systems", "name": "Распределённые системы", "associations": ["Консенсус", "Шардирование", "Репликация", "Согласованность", "Партиции"] },
+
+    { "id": "cap-theorem", "name": "CAP-теорема", "associations": ["Consistency", "Availability", "Partition tolerance"] },
+
+    { "id": "data-structures", "name": "Структуры данных", "associations": ["Массив", "Список", "Стек", "Очередь", "Дерево", "Хэш-таблица"] },
+
+    { "id": "algorithms", "name": "Алгоритмы", "associations": ["Сортировка", "Поиск", "DFS", "BFS", "Дейкстра"] },
+
+    { "id": "complexity", "name": "Сложность", "associations": ["O(1)", "O(log n)", "O(n)", "O(n log n)", "O(n^2)"] },
+
+    { "id": "gitflow", "name": "GitFlow", "associations": ["feature", "develop", "release", "hotfix", "main"] },
+
+    { "id": "code-review", "name": "Код-ревью", "associations": ["LGTM", "Замечания", "Нейминг", "Стиль", "Рефакторинг"] },
+
+    { "id": "documentation", "name": "Документация", "associations": ["README", "Swagger", "ADR", "Changelog", "Диаграмма"] },
+
+    { "id": "diagram-types", "name": "Диаграммы", "associations": ["ER", "BPMN", "UML", "Sequence", "C4"] },
+
+    { "id": "build-pipelines", "name": "CI пайплайны", "associations": ["Lint", "Test", "Build", "Deploy", "Artifacts"] },
+
+    { "id": "deployment", "name": "Деплой", "associations": ["Blue-green", "Canary", "Rollback", "Migration", "Config"] },
+
+    { "id": "feature-flags", "name": "Фичефлаги", "associations": ["Toggle", "Rollout", "A/B", "Segment", "Kill switch"] },
+
+    { "id": "monitoring-tools", "name": "Инструменты мониторинга", "associations": ["Prometheus", "Grafana", "ELK", "Sentry", "Jaeger"] },
+
+    { "id": "queues", "name": "Очереди", "associations": ["Consumer", "Producer", "Offset", "Partition", "Ack"] },
+
+    { "id": "caching", "name": "Кеширование", "associations": ["TTL", "LRU", "Warmup", "Hit rate", "Invalidation"] },
+
+    { "id": "rate-limiting", "name": "Rate limiting", "associations": ["Throttle", "Quota", "Burst", "Token bucket", "429"] },
+
+    { "id": "data-consistency", "name": "Согласованность данных", "associations": ["ACID", "BASE", "Transaction", "Saga", "Outbox"] },
+
+    { "id": "microservices", "name": "Микросервисы", "associations": ["Gateway", "Service discovery", "Circuit breaker", "Sidecar", "Mesh"] },
+
+    { "id": "kafka", "name": "Kafka", "associations": ["Topic", "Broker", "Partition", "Consumer group", "Offset"] },
+
+    { "id": "redis", "name": "Redis", "associations": ["Keyspace", "PubSub", "Cluster", "TTL", "Lua"] },
+
+    { "id": "postgresql", "name": "PostgreSQL", "associations": ["Index", "VACUUM", "WAL", "Join", "Transaction"] },
+
+    { "id": "mongodb", "name": "MongoDB", "associations": ["Document", "Collection", "Aggregation", "Replica set", "Sharding"] },
+
+    { "id": "http", "name": "HTTP", "associations": ["Header", "Method", "Body", "Cache-Control", "CORS"] },
+
+    { "id": "rest", "name": "REST", "associations": ["Resource", "Verb", "Idempotent", "HATEOAS", "Status code"] },
+
+    { "id": "grpc", "name": "gRPC", "associations": ["Proto", "Unary", "Streaming", "Channel", "Deadline"] },
+
+    { "id": "graphql", "name": "GraphQL", "associations": ["Schema", "Resolver", "Query", "Mutation", "Fragment"] },
+
+    { "id": "websockets", "name": "WebSocket", "associations": ["Handshake", "Frame", "Ping", "Pong", "Realtime"] },
+
+    { "id": "cloud-storage", "name": "Облачное хранилище", "associations": ["Bucket", "Object", "Lifecycle", "Versioning", "ACL"] },
+
+    { "id": "iam", "name": "Управление доступом", "associations": ["Role", "Policy", "Permission", "Principal", "Least privilege"] },
+
+    { "id": "kubernetes", "name": "Kubernetes", "associations": ["Pod", "Deployment", "Service", "Ingress", "Namespace"] },
+
+    { "id": "docker", "name": "Docker", "associations": ["Dockerfile", "Layer", "Image", "Container", "Volume"] },
+
+    { "id": "terraform", "name": "Terraform", "associations": ["Provider", "State", "Plan", "Apply", "Module"] },
+
+    { "id": "linux", "name": "Linux", "associations": ["Shell", "Systemd", "Permissions", "Package", "Daemon"] },
+
+    { "id": "terminal", "name": "Терминал", "associations": ["bash", "zsh", "pipe", "grep", "ssh"] },
+
+    { "id": "shell-tools", "name": "CLI утилиты", "associations": ["curl", "jq", "awk", "sed", "tmux"] },
+
+    { "id": "text-editors", "name": "Редакторы", "associations": ["VS Code", "Vim", "Emacs", "IntelliJ"] },
+
+    { "id": "fonts", "name": "Шрифты", "associations": ["Serif", "Sans", "Monospace", "Курсив", "Жирный"] },
+
+    { "id": "printing", "name": "Печать", "associations": ["Принтер", "Картридж", "Лист", "Двусторонняя", "Сканер"] },
+
+    { "id": "office-software", "name": "Офисные программы", "associations": ["Word", "Excel", "PowerPoint", "PDF", "OneNote"] },
+
+    { "id": "file-systems", "name": "Файловые системы", "associations": ["ext4", "NTFS", "APFS", "FAT32", "ZFS"] },
+
+    { "id": "compression", "name": "Сжатие", "associations": ["zip", "tar", "gzip", "7z", "архив"] },
+
+    { "id": "encryption", "name": "Шифрование", "associations": ["Ключ", "Сеанс", "Шифр", "Расшифровка", "TLS"] },
+
+    { "id": "protocols", "name": "Протоколы", "associations": ["TCP", "UDP", "TLS", "HTTP/2", "QUIC"] },
+
+    { "id": "timezones", "name": "Часовые пояса", "associations": ["UTC", "GMT", "CET", "MSK", "PST"] },
+
+    { "id": "continents", "name": "Континенты", "associations": ["Евразия", "Африка", "Северная Америка", "Южная Америка", "Антарктида"] },
+
+    { "id": "directions", "name": "Стороны света", "associations": ["Север", "Юг", "Запад", "Восток"] },
+
+    { "id": "minerals", "name": "Минералы", "associations": ["Кварц", "Гранит", "Гипс", "Мрамор", "Слюда"] },
+
+    { "id": "gems", "name": "Драгоценные камни", "associations": ["Алмаз", "Рубин", "Сапфир", "Изумруд", "Топаз"] },
+
+    { "id": "meteo-tools", "name": "Метеоприборы", "associations": ["Барометр", "Термометр", "Анемометр", "Гигрометр"] },
+
+    { "id": "ships", "name": "Типы судов", "associations": ["Пароход", "Танкер", "Контейнеровоз", "Яхта", "Паром"] },
+
+    { "id": "aircraft", "name": "Типы самолётов", "associations": ["Лайнер", "Истребитель", "Бомбардировщик", "Турбовинтовой", "Бизнес-джет"] },
+
+    { "id": "spacecraft", "name": "Космические аппараты", "associations": ["Спутник", "Зонд", "Капсула", "Ровер", "Ландер"] },
+
+    { "id": "science-method", "name": "Научный метод", "associations": ["Гипотеза", "Эксперимент", "Наблюдение", "Модель", "Фальсификация"] },
+
+    { "id": "logic", "name": "Логика", "associations": ["Импликация", "Конъюнкция", "Дизъюнкция", "Тавтология", "Софизм"] },
+
+    { "id": "rhetoric", "name": "Риторика", "associations": ["Тезис", "Пафос", "Этос", "Логос", "Аргументация"] },
+
+    { "id": "ethics", "name": "Этика", "associations": ["Добро", "Зло", "Долг", "Справедливость", "Ответственность"] },
+
+    { "id": "metaphysics", "name": "Метафизика", "associations": ["Бытие", "Причина", "Субстанция", "Идентичность", "Возможность"] },
+
+    { "id": "astronomy", "name": "Астрономия", "associations": ["Орбита", "Гравитация", "Телескоп", "Спектр", "Параллакс"] },
+
+    { "id": "geography", "name": "География", "associations": ["Карта", "Координаты", "Климат", "Рельеф", "Регион"] },
+
+    { "id": "linguistics", "name": "Лингвистика", "associations": ["Фонетика", "Морфология", "Синтаксис", "Семантика", "Прагматика"] },
+
+    { "id": "literary-devices", "name": "Тропы", "associations": ["Метафора", "Эпитет", "Гипербола", "Ирония", "Сравнение"] },
+
+    { "id": "storytelling", "name": "Сторителлинг", "associations": ["Конфликт", "Арка героя", "Кульминация", "Развязка", "Экспозиция"] },
+
+    { "id": "cinema-production", "name": "Кинопроизводство", "associations": ["Съёмка", "Кастинг", "Локация", "Постпродакшн", "Прокат"] },
+
+    { "id": "animation", "name": "Анимация", "associations": ["Кадр", "Тайминг", "Риг", "Сквош", "Твининг"] },
+
+    { "id": "comics", "name": "Комиксы", "associations": ["Панель", "Бабл", "Супергерой", "Арка", "Выпуск"] },
+
+    { "id": "cartoons", "name": "Мультфильмы", "associations": ["Персонаж", "Серия", "Студия", "Озвучка", "Скетч"] },
+
+    { "id": "human-body", "name": "Тело человека", "associations": ["Сердце", "Лёгкие", "Печень", "Мышца", "Кость"] },
+
+    { "id": "senses", "name": "Органы чувств", "associations": ["Зрение", "Слух", "Обоняние", "Вкус", "Осязание"] },
+
+    { "id": "microbiology", "name": "Микробиология", "associations": ["Бактерия", "Вирус", "Грибок", "Антибиотик", "Культура"] },
+
+    { "id": "genetics", "name": "Генетика", "associations": ["ДНК", "Ген", "Мутация", "Наследственность", "Геном"] },
+
+    { "id": "ecology", "name": "Экология", "associations": ["Экосистема", "Биоразнообразие", "Пищевые цепи", "Выбросы", "Заповедник"] },
+
+    { "id": "energy", "name": "Энергетика", "associations": ["Турбина", "Генератор", "Сеть", "Мощность", "Тариф"] },
+
+    { "id": "renewables", "name": "Возобновляемая энергия", "associations": ["Солнце", "Ветер", "Гидро", "Биомасса", "Аккумулятор"] },
+
+    { "id": "mining", "name": "Добыча", "associations": ["Шахта", "Карьер", "Руда", "Бурение", "Обогащение"] },
+
+    { "id": "manufacturing", "name": "Производство", "associations": ["Станок", "Конвейер", "Партия", "Контроль качества", "Сборка"] },
+
+    { "id": "welding", "name": "Сварка", "associations": ["Дуга", "Электрод", "Шов", "MIG", "TIG"] },
+
+    { "id": "metallurgy", "name": "Металлургия", "associations": ["Плавка", "Прокат", "Закалка", "Сплав", "Шлак"] },
+
+    { "id": "woodworking", "name": "Столярка", "associations": ["Рубанок", "Стамеска", "Шлифовка", "Лак", "Фанера"] },
+
+    { "id": "painting-art", "name": "Рисование", "associations": ["Карандаш", "Эскиз", "Линия", "Тень", "Перспектива"] },
+
+    { "id": "sculpture", "name": "Скульптура", "associations": ["Глина", "Мрамор", "Резец", "Форма", "Барельеф"] },
+
+    { "id": "sports-athletics", "name": "Лёгкая атлетика", "associations": ["Бег", "Прыжок", "Метание", "Спринт", "Эстафета"] },
+
+    { "id": "sports-combat", "name": "Единоборства", "associations": ["Бокс", "Дзюдо", "Карате", "Самбо", "ММА"] },
+
+    { "id": "sports-team", "name": "Командные виды спорта", "associations": ["Футбол", "Хоккей", "Волейбол", "Гандбол", "Бейсбол"] },
+
+    { "id": "sports-individual", "name": "Индивидуальные виды спорта", "associations": ["Теннис", "Гольф", "Шахматы", "Плавание", "Бег"] },
+
+    { "id": "chess", "name": "Шахматы", "associations": ["Ферзь", "Слон", "Конь", "Мат", "Дебют"] },
+
+    { "id": "cards", "name": "Карточные игры", "associations": ["Покер", "Дурак", "Бридж", "Блэкджек", "Таро"] },
+
+    { "id": "math-symbols", "name": "Математические символы", "associations": ["∑", "∞", "√", "≈", "≤"] },
+
+    { "id": "punctuation", "name": "Знаки препинания", "associations": ["Запятая", "Точка", "Двоеточие", "Тире", "Скобки"] },
+
+    { "id": "web-security", "name": "Безопасность веба", "associations": ["CSP", "HSTS", "SameSite", "CORS", "TLS"] },
+
+    { "id": "identity", "name": "Идентификация", "associations": ["Логин", "Пароль", "Токен", "Сессия", "Cookie"] },
+
+    { "id": "performance", "name": "Производительность", "associations": ["Latency", "Throughput", "Профилирование", "Кеш", "Пул"] },
+
+    { "id": "scalability", "name": "Масштабирование", "associations": ["Вертикальное", "Горизонтальное", "Балансировщик", "Шардирование", "Кластер"] },
+
+    { "id": "data-engineering", "name": "Data Engineering", "associations": ["DWH", "Lake", "Pipeline", "Orchestrator", "Schema"] },
+
+    { "id": "orchestration", "name": "Оркестрация", "associations": ["Airflow", "Dagster", "Cron", "DAG", "Scheduler"] },
+
+    { "id": "time-management", "name": "Тайм-менеджмент", "associations": ["План", "Приоритет", "Дедлайн", "Фокус", "Рутина"] },
+
+    { "id": "habits", "name": "Привычки", "associations": ["Трекер", "Цель", "Повтор", "Награда", "Срыв"] },
+
+    { "id": "sleep", "name": "Сон", "associations": ["Фаза", "Режим", "Мелатонин", "Храп", "Будильник"] },
+
+    { "id": "food-fast", "name": "Фастфуд", "associations": ["Бургер", "Пицца", "Шаурма", "Картошка фри", "Наггетсы"] },
+
+    { "id": "street-food", "name": "Уличная еда", "associations": ["Хот-дог", "Тако", "Чебурек", "Пончики", "Кукуруза"] },
+
+    { "id": "breakfast", "name": "Завтрак", "associations": ["Каша", "Тост", "Йогурт", "Сырники", "Гранола"] },
+
+    { "id": "lunch", "name": "Обед", "associations": ["Суп", "Гарнир", "Салат", "Котлета", "Компот"] },
+
+    { "id": "dinner", "name": "Ужин", "associations": ["Паста", "Рыба", "Овощи", "Рагу", "Запеканка"] },
+
+    { "id": "snack", "name": "Перекус", "associations": ["Орехи", "Батончик", "Фрукты", "Сэндвич", "Чипсы"] },
+
+    { "id": "salad", "name": "Салаты", "associations": ["Оливье", "Цезарь", "Греческий", "Винегрет", "Капрезе"] },
+
+    { "id": "sauces", "name": "Соусы", "associations": ["Кетчуп", "Майонез", "Песто", "Терияки", "Горчица"] },
+
+    { "id": "baking", "name": "Выпечка", "associations": ["Тесто", "Дрожжи", "Расстойка", "Духовка", "Начинка"] },
+
+    { "id": "kinds-of-maps", "name": "Типы карт", "associations": ["Политическая", "Физическая", "Топографическая", "Тепловая", "Схема метро"] },
+
+    { "id": "maritime", "name": "Мореходство", "associations": ["Штурвал", "Компас", "Навигация", "Шторм", "Экипаж"] },
+
+    { "id": "rail-objects", "name": "ЖД инфраструктура", "associations": ["Стрелка", "Семафор", "Переезд", "Путевой пост", "Депо"] },
+
+    { "id": "road-objects", "name": "Дорожная инфраструктура", "associations": ["Развязка", "Обочина", "Отбойник", "Мост", "Тоннель"] },
+
+    { "id": "sports-stadium", "name": "Стадион", "associations": ["Трибуна", "Поле", "Табло", "Сектор", "Раздевалка"] },
+
+    { "id": "kinds-of-bags", "name": "Сумки", "associations": ["Рюкзак", "Сумка", "Чемодан", "Барсетка", "Клатч"] },
+
+    { "id": "weather-clothes", "name": "Одежда по погоде", "associations": ["Дождевик", "Пуховик", "Ветровка", "Термобельё", "Шорты"] },
+
+    { "id": "stationery-paper", "name": "Бумага", "associations": ["Лист", "Блокнот", "Тетрадь", "Стикер", "Конверт"] },
+
+    { "id": "printing-supplies", "name": "Расходники печати", "associations": ["Тонер", "Чернила", "Барабан", "Картридж", "Фотобумага"] }
+  ]
+}

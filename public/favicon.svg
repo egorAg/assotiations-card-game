@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <!-- Diagonal stripe pattern for card back -->
+    <pattern id="stripes" patternUnits="userSpaceOnUse" width="8" height="8" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="rgba(74,136,196,0.22)" stroke-width="2.5"/>
+    </pattern>
+    <!-- Clip for gold card's top stripe -->
+    <clipPath id="gold-card-clip">
+      <rect x="24" y="9" width="31" height="43" rx="6.5"/>
+    </clipPath>
+  </defs>
+
+  <!-- App background — dark navy rounded square -->
+  <rect width="64" height="64" rx="14" fill="#0d1826"/>
+
+  <!-- ── Blue association card (back, tilted left) ─────────────── -->
+  <g transform="rotate(-14, 22, 32)">
+    <!-- Card body -->
+    <rect x="6" y="11" width="32" height="43" rx="6.5"
+          fill="#152d46" stroke="#4a88c4" stroke-width="2"/>
+    <!-- Subtle back-of-card stripe texture -->
+    <rect x="6" y="11" width="32" height="43" rx="6.5"
+          fill="url(#stripes)"/>
+  </g>
+
+  <!-- ── Gold category card (front, tilted right) ──────────────── -->
+  <g transform="rotate(11, 39.5, 30.5)">
+    <!-- Card body -->
+    <rect x="24" y="9" width="31" height="43" rx="6.5"
+          fill="#1d1900" stroke="#c49012" stroke-width="2.5"/>
+    <!-- Gold top stripe (clipped to card shape) -->
+    <rect x="24" y="9" width="31" height="7"
+          fill="#c49012" opacity="0.92"
+          clip-path="url(#gold-card-clip)"/>
+    <!-- Small diamond symbol — subtle, centered on visible card area -->
+    <polygon
+      points="39.5,25 44.5,31.5 39.5,38 34.5,31.5"
+      fill="rgba(196,144,18,0.28)"
+      stroke="rgba(196,144,18,0.5)"
+      stroke-width="1.2"
+      stroke-linejoin="round"/>
+  </g>
+</svg>
