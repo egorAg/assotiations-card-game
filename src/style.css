@@ -44,6 +44,7 @@ html, body {
 #app {
   width: 100%;
   height: 100dvh;
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* ══════════════════════════════════════════
@@ -170,6 +171,7 @@ html, body {
   align-items: center;
   justify-content: space-between;
   padding: 10px 14px 8px;
+  padding-top: calc(10px + env(safe-area-inset-top));
   flex-shrink: 0;
 }
 
