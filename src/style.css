@@ -62,7 +62,7 @@ html, body {
 }
 
 .menu-bg {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background:
     radial-gradient(ellipse 80% 60% at 50% 110%, rgba(72, 130, 180, 0.18) 0%, transparent 70%),
