@@ -67,7 +67,7 @@ html, body {
   background:
     radial-gradient(ellipse 80% 60% at 50% 110%, rgba(72, 130, 180, 0.18) 0%, transparent 70%),
     radial-gradient(ellipse 60% 40% at 20% 20%, rgba(100, 160, 200, 0.08) 0%, transparent 60%),
-    linear-gradient(170deg, #0e1a2b 0%, #111f30 60%, #0c1a28 100%);
+    linear-gradient(170deg, #0a141f 0%, #111f30 55%, var(--bg) 100%);
   z-index: 0;
 }
 
@@ -1143,7 +1143,7 @@ html, body {
   background:
     radial-gradient(ellipse 80% 60% at 50% 110%, rgba(70, 130, 200, 0.18) 0%, transparent 70%),
     radial-gradient(ellipse 60% 40% at 20% 20%, rgba(80, 140, 190, 0.08) 0%, transparent 60%),
-    linear-gradient(170deg, #d5e6f2 0%, #ddeaf7 60%, #cfe0ee 100%);
+    linear-gradient(170deg, #c8dcea 0%, #ddeaf7 55%, var(--bg) 100%);
 }
 .theme-light .menu-glow {
   background: radial-gradient(circle, rgba(50, 110, 195, 0.14) 0%, transparent 70%);
@@ -1202,7 +1202,7 @@ html, body {
   background:
     radial-gradient(ellipse 80% 60% at 50% 110%, rgba(40, 140, 70, 0.3) 0%, transparent 70%),
     radial-gradient(ellipse 60% 40% at 20% 20%, rgba(30, 100, 50, 0.1) 0%, transparent 60%),
-    linear-gradient(170deg, #1e5238 0%, #276442 60%, #1a4530 100%);
+    linear-gradient(170deg, #1a4530 0%, #1f5c3c 55%, var(--bg) 100%);
 }
 .theme-classic .menu-glow {
   background: radial-gradient(circle, rgba(50, 200, 100, 0.1) 0%, transparent 70%);
