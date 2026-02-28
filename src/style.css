@@ -22,6 +22,12 @@
   --text:            #c8dff0;
   --text-dim:        rgba(140, 180, 220, 0.45);
   --radius:          10px;
+  --overlay-bg:          rgba(8, 16, 28, 0.95);
+  --overlay-win-color:   rgba(100, 220, 160, 0.9);
+  --overlay-lose-color:  rgba(220, 90, 70, 0.9);
+  --overlay-btn-text:    #c8dff0;
+  --overlay-btn-bg:      rgba(80, 140, 200, 0.18);
+  --overlay-btn-border:  rgba(130, 180, 230, 0.5);
   --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
   --card-back-stripe: rgba(80, 140, 200, 0.07);
 }
@@ -602,7 +608,7 @@ html, body {
 .lose-screen {
   position: fixed;
   inset: 0;
-  background: rgba(8, 16, 28, 0.93);
+  background: var(--overlay-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -615,7 +621,7 @@ html, body {
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 0.1em;
-  color: rgba(220, 90, 70, 0.9);
+  color: var(--overlay-lose-color);
 }
 
 .buy-moves-btn {
@@ -648,7 +654,7 @@ html, body {
 .win-screen {
   position: fixed;
   inset: 0;
-  background: rgba(8, 16, 28, 0.93);
+  background: var(--overlay-bg);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -661,7 +667,20 @@ html, body {
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 0.1em;
-  color: rgba(100, 220, 160, 0.9);
+  color: var(--overlay-win-color);
+}
+
+.win-screen .menu-btn-play,
+.lose-screen .menu-btn-play {
+  color: var(--overlay-btn-text);
+  background: var(--overlay-btn-bg);
+  border-color: var(--overlay-btn-border);
+}
+.win-screen .menu-btn-play:hover,
+.lose-screen .menu-btn-play:hover {
+  background: var(--overlay-btn-bg);
+  border-color: var(--overlay-btn-border);
+  filter: brightness(1.15);
 }
 
 .win-sub {
@@ -1147,6 +1166,14 @@ html, body {
 
 .theme-light .theme-btn            { border-color: rgba(0, 0, 0, 0.08); background: rgba(0, 0, 0, 0.03); }
 .theme-light .theme-btn--active    { border-color: var(--selected); background: rgba(0, 0, 0, 0.06); }
+.theme-light {
+  --overlay-bg:         rgba(218, 234, 248, 0.97);
+  --overlay-win-color:  rgba(25, 145, 75, 0.95);
+  --overlay-lose-color: rgba(195, 45, 35, 0.9);
+  --overlay-btn-text:   #152333;
+  --overlay-btn-bg:     rgba(55, 110, 180, 0.12);
+  --overlay-btn-border: rgba(55, 110, 180, 0.4);
+}
 
 /* ══ CLASSIC THEME ════════════════════════════ */
 
@@ -1197,6 +1224,11 @@ html, body {
 .theme-classic .deck-count       { color: rgba(250, 240, 220, 0.7); }
 .theme-classic .deck-recycle     { color: rgba(250, 240, 220, 0.65); }
 .theme-classic .deck-recycle-count { color: rgba(250, 240, 220, 0.45); }
-.theme-classic .win-screen       { background: rgba(10, 40, 20, 0.94); }
-.theme-classic .win-title        { color: rgba(80, 220, 140, 0.9); }
-.theme-classic .lose-screen      { background: rgba(10, 40, 20, 0.94); }
+.theme-classic {
+  --overlay-bg:         rgba(10, 40, 20, 0.96);
+  --overlay-win-color:  rgba(80, 220, 140, 0.9);
+  --overlay-lose-color: rgba(220, 90, 70, 0.9);
+  --overlay-btn-text:   #f5f0e8;
+  --overlay-btn-bg:     rgba(196, 30, 58, 0.18);
+  --overlay-btn-border: rgba(196, 30, 58, 0.55);
+}
