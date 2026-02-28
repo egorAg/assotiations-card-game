@@ -44,7 +44,6 @@ html, body {
 #app {
   width: 100%;
   height: 100dvh;
-  padding-bottom: env(safe-area-inset-bottom);
 }
 
 /* ══════════════════════════════════════════
@@ -594,7 +593,7 @@ html, body {
 /* Menu screen coin badge */
 .menu-coins {
   position: absolute;
-  top: 18px;
+  top: calc(18px + env(safe-area-inset-top));
   right: 18px;
   display: flex;
   align-items: center;
@@ -965,6 +964,7 @@ html, body {
   display: flex;
   align-items: center;
   padding: 10px 14px 8px;
+  padding-top: calc(10px + env(safe-area-inset-top));
   gap: 10px;
   flex-shrink: 0;
 }
