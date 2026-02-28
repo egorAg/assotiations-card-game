@@ -85,7 +85,7 @@ export function createGame(): GameState {
     categoryAssocCounts,
     completedCategories: 0,
     totalCategories: count,
-    movesLeft: difficulty === 'hard' ? count * 2 + 55 : null,
+    movesLeft: difficulty === 'hard' ? pool.length + 55 : null,
   };
 }
 

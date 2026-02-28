@@ -35,7 +35,7 @@ export class SettingsScreen {
             <button class="diff-btn" data-diff="easy">Лёгкий</button>
             <button class="diff-btn" data-diff="hard">Сложный</button>
           </div>
-          <span class="settings-hint">На сложном уровне количество ходов ограничено: кол-во категорий × 2 + 55.</span>
+          <span class="settings-hint">На сложном уровне количество ходов ограничено: кол-во карт в игре + 55.</span>
         </div>
 
         <div class="settings-row">
